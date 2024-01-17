@@ -51,7 +51,7 @@ defmodule Pento.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
-      {:phx_gen_auth, "~> 0.7", only: [:dev], runtime: false}
+      {:pow, "~> 1.0.35"}
     ]
   end
 
