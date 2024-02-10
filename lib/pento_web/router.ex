@@ -26,6 +26,7 @@ defmodule PentoWeb.Router do
 
     get "/", PageController, :home
     live "/guess", WrongLive
+    resources "/products", ProductController
   end
 
   # Other scopes may use custom stacks.
