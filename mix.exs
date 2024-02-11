@@ -51,7 +51,8 @@ defmodule Pento.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
-      {:pow, "~> 1.0.35"}
+      {:pow, "~> 1.0.35"},
+      {:faker_elixir_octopus, "~> 1.0"}
     ]
   end
 
