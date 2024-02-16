@@ -26,6 +26,7 @@ defmodule PentoWeb.Router do
 
     get "/", PageController, :home
     live "/guess", WrongLive
+    resources "/blog", BlogController
 
     live "/products", ProductLive.Index, :index
     live "/products/new", ProductLive.Index, :new

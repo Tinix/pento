@@ -1,0 +1,39 @@
+<.header>
+  Listing Blog
+  <:actions>
+    <.link href={~p"/blog/new"}>
+      <.button>New Blog</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="blog" rows={@blog_collection} row_click={&JS.navigate(~p"/blog/#{&1}")}>
+  <:col :let={blog} label="Title"><%= blog.title %></:col>
+  <:col :let={blog} label="Content"><%= blog.content %></:col>
+  <:action :let={blog}>
+    <div class="sr-only">
+      <.link navigate={~p"/blog/#{blog}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/blog/#{blog}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={blog}>
+    <.link href={~p"/blog/#{blog}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>
+
+
+<%!-- <%= for blog <- @blog_collection do %> --%>
+<%!--   <h1 class="text-brown-400 text-3xl"> --%>
+<%!--    <%= link to: Routes.blog_path(@conn, :show, blog) do %> --%>
+<%!--    <%= blog.title %> --%>
+<%!--    <% end %> --%>
+
+<%!--   </h1> --%>
+<%!--   <br /> --%>
+
+<%!--   <p><%= blog.content %></p> --%>
+<%!--  <% end %> --%> 
+
+

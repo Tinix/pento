@@ -1,0 +1,16 @@
+<.header>
+  Blog <%= @blog.id %>
+  <:subtitle>This is a blog record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/blog/#{@blog}/edit"}>
+      <.button>Edit blog</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Title"><%= @blog.title %></:item>
+  <:item title="Content"><%= @blog.content %></:item>
+</.list>
+
+<.back navigate={~p"/blog"}>Back to blog</.back>
